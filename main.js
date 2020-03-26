@@ -1,6 +1,6 @@
 const api = {
     key: "ea49e1c863a06c712d9ca16e790d9548",
-    baseurl: "https://api.openweathermap.org/data/2.5/"
+    base: "https://api.openweathermap.org/data/2.5/"
 }
 
 const searchbox = document.querySelector('.search-box');
@@ -43,8 +43,8 @@ function dateBuilder(d) {
 }
 
 let day = days[d.getDay()];
-let date = date[d.getDate()];
+let date = d.getDate();
 let month = months[d.getMonth()];
-let year = years[d.getFullYear()];
+let year = d.getFullYear();
 
 return `${day} ${date} ${month} ${year}`;
